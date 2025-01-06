@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>XO Game</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            XO Game
+        </div>
+        <div class="links">
+            <a href="#" id="newGameBtn">| New Game |</a>
+            <a href="#">| Play with Computer |</a>
+            <a href="#">| History Games |</a>
+        </div>
+    </div>
+    
+    <div class="scoreboard">
+        <div class="score">
+            <h3 style="text-align: center;">Player X<br> <span id="x-score">0</span></h3>
+        </div>
+        <div class="score">
+            <h3 style="text-align: center;">Player O<br> <span id="o-score">0</span></h3>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header"><span>X O &nbsp;</span> Game</div>
+        <div class="game">
+            <div class="square" id="item1" onclick="game(this.id)"></div>
+            <div class="square" id="item2" onclick="game(this.id)"></div>
+            <div class="square" id="item3" onclick="game(this.id)"></div>
+
+            <div class="square" id="item4" onclick="game(this.id)"></div>
+            <div class="square" id="item5" onclick="game(this.id)"></div>
+            <div class="square" id="item6" onclick="game(this.id)"></div>
+            
+            <div class="square" id="item7" onclick="game(this.id)"></div>
+            <div class="square" id="item8" onclick="game(this.id)"></div>
+            <div class="square" id="item9" onclick="game(this.id)"></div>
+        </div>
+    </div>
+    <script src="JS.js" defer></script> 
+</body>
+</html>

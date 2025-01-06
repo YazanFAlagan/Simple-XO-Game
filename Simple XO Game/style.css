@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E0F7FA;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #42A5F5;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFC107;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #FFD700;
+}
+
+/* Styling the scoreboard to appear in the middle with player scores */
+.scoreboard {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    justify-content: center; /* Center elements vertically */
+    align-items: center;     /* Center elements horizontally */
+    position: fixed;         /* Fix the scoreboard position */
+    top: 50%;                /* Position it in the middle vertically */
+    right: 20px;             /* Set distance from the right side */
+    width: 100px;            /* Set width of the scoreboard */
+    height: auto;            /* Adjust height based on content */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    font-size: 18px;
+    color: #FFC107;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Shadow effect */
+    z-index: 999;
+    transition: box-shadow 0.3s ease-in-out;
+    animation: float 3s infinite; /* Add floating animation */
+    transform: translateY(-50%); /* Move the scoreboard to the vertical center */
+}
+
+.scoreboard:hover {
+    box-shadow: 0 0 20px rgba(0, 176, 255, 0.6), 0 0 30px rgba(0, 176, 255, 0.8);
+}
+
+.score h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* Floating animation for the scoreboard */
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Start at the defined position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move slightly upwards */
+    }
+    100% {
+        transform: translateY(0); /* Return to the original position */
+    }
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: glowing-border 3s infinite;
+    text-align: center; 
+}
+
+/* Glowing border animation for the container */
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 
+                    0 0 15px rgba(255, 255, 255, 0.2), 
+                    0 0 30px rgba(0, 176, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                    0 0 30px rgba(0, 176, 255, 0.6), 
+                    0 0 50px rgba(0, 176, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 
+                    0 0 15px rgba(0, 176, 255, 0.4), 
+                    0 0 30px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.header {
+    background-color: #81C784;
+    padding: 10px 0;
+    margin: 2.5px 0;
+    height: 50px; 
+    border-radius: 5px;
+    font-size: 30px; 
+    font-weight: bold;
+    color: #FFC107;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+span {
+    color: #FFC107;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.square {
+    background-color: #42A5F5;
+    height: 90px;
+    width: 110px;
+    font-size: 65px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.square:hover {
+    background-color: #1E88E5;
+    cursor: pointer;
+}
